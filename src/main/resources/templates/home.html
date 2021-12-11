@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" >
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <title th:text = "${title}"></title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+</head>
+<body>
+<div class="container">
+        <div class="row">
+            <div class="col-md-4 offset-md-4 mt-4">
+           
+    
+    			<div class="card" style=" box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);">
+    			<div th:if="${param.error}" class="alert alert-danger text-center" role="alert">
+								<b>Invalid username and password</b>
+								
+				</div>
+				<div th:if="${param.logout}" class="alert alert-success text-center" role="alert">
+								<b>You have been logout.</b>
+				</div>
+                <div class="login-form bg-white mt-4 p-4">
+                
+					<h4 class="text-center">Please Login Here </h4>
+                        <div class="col-12 text-center " style="margin-top:19px;">
+                            <a class="btn btn-outline-dark" href="/oauth2/authorization/google" role="button" style="text-transform:none">
+      <img width="20px" style="margin-bottom:3px; margin-right:5px" alt="Google sign-in" src="https://upload.wikimedia.org/wikipedia/commons/thumb/5/53/Google_%22G%22_Logo.svg/512px-Google_%22G%22_Logo.svg.png" />
+      Login with Google
+    </a>
+                        </div>
+                    <hr class="mt-4">
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</body>
+</html>
